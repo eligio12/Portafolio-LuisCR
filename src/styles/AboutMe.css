@@ -1,0 +1,191 @@
+/* --- ABOUT ME --- */
+.aboutMe {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    margin-top: 12em;
+  }
+  
+  .aboutMe__name {
+    font-size: 4em;
+    background: #0400ff;
+    background: -webkit-linear-gradient(182deg, #0400ff 0%, #9951ff 100%);
+    background: linear-gradient(182deg, #0400ff 0%, #9951ff 100%);
+  
+      background-clip: text; 
+      color: transparent;
+  
+  
+  }
+  @-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  .aboutMe__imgtext {
+    position: absolute;
+    top: 6em;
+    left: 4em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    box-sizing: border-box;
+  
+    background: rgba(227, 223, 223, 0.495);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  
+    /* z-index: 1; */
+    gap: .8em;
+  }
+  .aboutMe__imgtext p{
+    width: 100%;
+    text-align: justify;
+  }
+  .aboutMe__imgtext h3{
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+  
+  .aboutMe__img {
+    position: absolute;
+    bottom: 6em;
+    right: 8em;
+    width: 380px;
+  }
+  
+  .about__information {
+    display: flex;
+    gap: 5em;
+    width: 100%;
+  }
+  .information {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .5em;
+  }
+  .education {
+    list-style: none;
+    text-align: start;
+    padding: 1em;
+  }
+  .career {
+    font-weight: 600;
+  }
+  .myInformation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1em;
+    padding: 1em;
+  }
+  
+  @media (max-width: 1524px) {
+    .aboutMe__img {
+      width: 200px;
+      top: 0;
+      right: 2em;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .aboutMe__img {
+      width: 200px;
+      top: 0;
+      right: 2em;
+    }
+  }
+  @media (max-width: 768px) {
+    .aboutMe__img {
+      width: 180px;
+      top: 0;
+      right: 2em;
+    }
+    .aboutMe__imgtext {
+      font-size: .8em;
+      left: 2em;
+    }
+    .myInformation {
+      text-align: start;
+    }
+  
+  }
+  
+  @media (max-width: 500px) {
+    .aboutMe {
+      height: 63em;
+    }
+    .aboutMe__name {
+      top: 0;
+      left: 0.3em;
+      font-size: 3em;
+    }
+    .aboutMe__imgtext {
+      top: 5em;
+      width: 93%;
+      right: 0.5em;
+      gap: 0;
+    }
+    .aboutMe__img {
+      width: 180px;
+      top: 40em;
+      right: 2em;
+    }
+  }
+  @media (max-width: 400px) {
+    .aboutMe {
+      height: 71em;
+    }
+    .aboutMe__name {
+      top: 0.2em;
+      left: 0.3em;
+      font-size: 3em;
+    }
+    .aboutMe__imgtext {
+      top: 5em;
+      width: 92%;
+      left: 0.5em;
+    }
+    .about__information {
+      gap: 0;
+    }
+    .myInformation {
+      width: 10em;
+      text-wrap: wrap;
+    }
+    .email {
+      font-size: .9em;
+    }
+  
+  }
+  @media (max-width: 350px) {
+    .aboutMe {
+      margin-top: 0;
+    }
+   
+    .aboutMe__img {
+      width: 150px;
+      top: 50em;
+      left: 9em;
+    }
+  }
