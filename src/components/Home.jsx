@@ -14,7 +14,7 @@ const Home = () => {
       </div>
       <div className='Home__btns'>
         <button className='home__btn--cv'>
-          <span><a href="/CV .pdf" download={' '}>Descargar CV</a></span>
+          <span><a href="/CV Luis CR.pdf" download={' '}>Descargar CV</a></span>
         </button>
         <a href="#aboutMe"><button className='Home__btn-ab'>Acerca de Mí</button></a>
       </div>
