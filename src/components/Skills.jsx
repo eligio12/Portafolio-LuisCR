@@ -15,7 +15,10 @@ const Skills = () => {
           <img src="/c.svg" alt="" />
           <img src="/postgresql.svg" alt="" />
           <img src="/mysql.svg" alt="" />
-          <img src="/figma.svg" alt="" />
+          <img src="/dbeaver.svg" alt="" />
+          <img src="/laravel.svg" alt="" />
+          <img src="/php.svg" alt="" />
+          <img src="/react-native.svg" alt="" />
         </div>
       </div>
     )

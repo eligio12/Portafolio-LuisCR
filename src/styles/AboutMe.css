@@ -1,191 +1,241 @@
 /* --- ABOUT ME --- */
 .aboutMe {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    margin-top: 12em;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  margin-top: 16em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutMe__name {
+  font-size: 4em;
+  background: linear-gradient(182deg, #0400ff 0%, #9951ff 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes AnimationName {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.aboutMe__imgtext {
+  position: relative;
+  top: 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  box-sizing: border-box;
+  background: rgba(227, 223, 223, 0.495);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  gap: .8em;
+}
+
+.aboutMe__imgtext p {
+  width: 100%;
+  text-align: justify;
+}
+
+.aboutMe__imgtext h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.aboutMe__img {
+  position: relative;
+  width: 380px;
+  margin-top: 2em;
+  border-radius: 50%;
+}
+
+.about__information {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: .5em;
+}
+
+.education,
+.myInformation,
+.experience {
+  list-style: none;
+  text-align: start;
+  padding: 1em;
+}
+
+.career,
+.jobTitle {
+  font-weight: 600;
+}
+
+/* --- Media Queries --- */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .aboutMe {
+    height: auto;
   }
-  
+
   .aboutMe__name {
-    font-size: 4em;
-    background: #0400ff;
-    background: -webkit-linear-gradient(182deg, #0400ff 0%, #9951ff 100%);
-    background: linear-gradient(182deg, #0400ff 0%, #9951ff 100%);
-  
-      background-clip: text; 
-      color: transparent;
-  
-  
+    font-size: 3.5em;
   }
-  @-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
-  @-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
-  @keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
-  .aboutMe__imgtext {
-    position: absolute;
-    top: 6em;
-    left: 4em;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    padding: 2em;
-    box-sizing: border-box;
-  
-    background: rgba(227, 223, 223, 0.495);
-    border: 1px solid white;
-    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(6px);
-    border-radius: 17px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    user-select: none;
-  
-    /* z-index: 1; */
-    gap: .8em;
-  }
-  .aboutMe__imgtext p{
-    width: 100%;
-    text-align: justify;
-  }
-  .aboutMe__imgtext h3{
-    font-size: 1.5em;
-    font-weight: 400;
-  }
-  
+
   .aboutMe__img {
-    position: absolute;
-    bottom: 6em;
-    right: 8em;
-    width: 380px;
+    width: 300px;
   }
-  
+
+  .aboutMe__imgtext {
+    width: 90%;
+    padding: 1.5em;
+  }
+
+  .about__information {
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+}
+
+/* Small screens like phones */
+@media (max-width: 768px) {
+  .aboutMe__name {
+    font-size: 2.5em;
+  }
+
+  .aboutMe__imgtext {
+    width: 95%;
+    font-size: 0.9em;
+  }
+
+  .aboutMe__img {
+    width: 200px;
+  }
+
   .about__information {
     display: flex;
-    gap: 5em;
+    flex-direction: column; /* Cambiar la dirección a columna */
+    gap: 1.5em; /* Ajustar el espacio entre los elementos */
+    align-items: center; /* Centrar los elementos */
     width: 100%;
   }
+
+  .education,
+  .myInformation,
+  .experience {
+    text-align: center; /* Centrar el texto en dispositivos móviles */
+    padding: 1em;
+    width: 100%;
+  }
+
   .information {
+    align-items: center; /* Asegurarse de centrar el contenido dentro de cada sección */
+    text-align: center; /* Centrar el texto dentro de cada sección */
+  }
+
+  .career,
+  .jobTitle {
+    font-size: 1.1em;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 500px) {
+  .aboutMe {
+    height: 63em;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: .5em;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+    margin-bottom: 100px;
   }
-  .education {
-    list-style: none;
-    text-align: start;
-    padding: 1em;
+
+  .aboutMe__name {
+    top: 0;
+    left: 0.3em;
+    font-size: 3em;
+    text-align: center; /* Centrar el texto */
   }
-  .career {
-    font-weight: 600;
+
+  .aboutMe__imgtext {
+    top: 5em;
+    width: 93%;
+    right: 0.5em;
+    gap: 0;
+    text-align: center; /* Centrar el contenido dentro del bloque */
   }
-  .myInformation {
-    list-style: none;
+
+  .aboutMe__img {
+    display: none; /* Ocultar la imagen en dispositivos con 500px o menos */
+  }
+}
+
+@media (max-width: 400px) {
+  .aboutMe {
+    height: 71em;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 1em;
-    padding: 1em;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
   }
-  
-  @media (max-width: 1524px) {
-    .aboutMe__img {
-      width: 200px;
-      top: 0;
-      right: 2em;
-    }
+
+  .aboutMe__name {
+    top: 0.2em;
+    left: 0.3em;
+    font-size: 3em;
+    text-align: center; /* Centrar el texto */
   }
-  
-  @media (max-width: 1024px) {
-    .aboutMe__img {
-      width: 200px;
-      top: 0;
-      right: 2em;
-    }
+
+  .aboutMe__imgtext {
+    top: 5em;
+    width: 92%;
+    left: 0.5em;
+    text-align: center; /* Centrar el contenido */
   }
-  @media (max-width: 768px) {
-    .aboutMe__img {
-      width: 180px;
-      top: 0;
-      right: 2em;
-    }
-    .aboutMe__imgtext {
-      font-size: .8em;
-      left: 2em;
-    }
-    .myInformation {
-      text-align: start;
-    }
-  
+
+  .aboutMe__img {
+    width: 180px;
+    margin: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
-  
-  @media (max-width: 500px) {
-    .aboutMe {
-      height: 63em;
-    }
-    .aboutMe__name {
-      top: 0;
-      left: 0.3em;
-      font-size: 3em;
-    }
-    .aboutMe__imgtext {
-      top: 5em;
-      width: 93%;
-      right: 0.5em;
-      gap: 0;
-    }
-    .aboutMe__img {
-      width: 180px;
-      top: 40em;
-      right: 2em;
-    }
+}
+
+@media (max-width: 350px) {
+  .aboutMe {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  @media (max-width: 400px) {
-    .aboutMe {
-      height: 71em;
-    }
-    .aboutMe__name {
-      top: 0.2em;
-      left: 0.3em;
-      font-size: 3em;
-    }
-    .aboutMe__imgtext {
-      top: 5em;
-      width: 92%;
-      left: 0.5em;
-    }
-    .about__information {
-      gap: 0;
-    }
-    .myInformation {
-      width: 10em;
-      text-wrap: wrap;
-    }
-    .email {
-      font-size: .9em;
-    }
-  
+
+  .aboutMe__img {
+    width: 150px;
+    top: 50em;
+    left: auto;
+    right: auto;
+    margin: auto;
   }
-  @media (max-width: 350px) {
-    .aboutMe {
-      margin-top: 0;
-    }
-   
-    .aboutMe__img {
-      width: 150px;
-      top: 50em;
-      left: 9em;
-    }
-  }
+}

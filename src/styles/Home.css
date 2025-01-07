@@ -196,9 +196,10 @@
     }
     .Home__name {
       margin-top: 0.2em;
-      font-size: 2.8em; 
+      font-size: 2em; 
+      height: 4.3em;
+      width: 100%;
       border-right: 2px solid;
-      height: 3.5em;
       padding: 0 20px;
       min-height: 4.5em;
     }
@@ -208,12 +209,18 @@
       font-size: var(--normal-font);
     }
     .Home__img  {
-      width: 370px;
+      width: 230px;
       height: 370px;
     }
     .Home__img img {
-      width: 370px;
+      width: 300px;
       border-radius: 50%;
+    }
+    .home__btn--cv,
+    .Home__btn-ab {
+      margin-top: 1.5em;
+      font-size: 0.7em;
+      height: 3.5em;
     }
   }
   @media (max-width:380px) {
